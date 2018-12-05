@@ -9,35 +9,34 @@ Array.prototype.diff = function(arr2) {
 
 // const commonChars = [...x].diff([...y]);
 
-// console.log(x.length);
-// console.log(y.length);
-// console.log(commonChars.length);
-
-
 fs.readFile('./day2/input.txt', (err, input) => {
   if (err) throw err;
 
+  const parsedInput = `${input}`.split('\n');
   let compareIndex = 0;
   const matches = [];
-  const parsedInput = `${input}`.split('\n');
 
-  parsedInput.forEach(string => {
-    let x = parsedInput[compareIndex];
-    let y = string;
-    console.log(x);
-    console.log(y);
-    const commonChars = [...x].diff([...y]);
-    // console.log(commonChars.length);
+  for (let i = 0; i < parsedInput.length; i++) {
+    let counter = 0;
+    let a = parsedInput[compareIndex];
 
-    if (commonChars.length === 25) {
-      matches.push(x);
-      matches.push(y);
+    for (let j = 0; j < parsedInput.length; j++) {
+      let b = parsedInput[j];
+
+      if (a[j] !== b[j]) {
+        counter++;
+      }
+    }
+
+    if (counter === 1) {
+      matches.push(a);
+      // matches.push(b);
     }
 
     compareIndex++;
-  });
+  }
 
-  // console.log(matches);
+  console.log(matches);
 });
 
 // fs.readFile('./day2/input.txt', (err, input) => {

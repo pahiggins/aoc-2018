@@ -15,3 +15,15 @@ Part 2 - WIP
 ## Day 4
 Part 1 - WIP\
 Part 2 - WIP
+
+## Day 5
+Part 1 - WIP\
+Part 2 - WIP
+
+## Day 6
+Part 1 - WIP\
+Part 2 - WIP
+
+## Day 7
+Part 1 - WIP\
+Part 2 - WIP
